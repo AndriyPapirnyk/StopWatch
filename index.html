@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+    <title>stop watch</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: rgb(230, 230, 251);
+}
+.left_page{
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right_page{
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.clock{
+    height: 100vh;
+    margin-left: 20px;
+}
+.s_hours{
+    position: absolute;
+    width: 430px;
+    height: 430px;
+}
+.s_min{
+    position: absolute;
+    width: 430px;
+    height: 430px;
+}
+.s_sec{
+position: absolute;
+width: 430px;
+    height: 430px;
+    transition: 0.1s;
+}
+.p1{
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+}
+#Time{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+}
+#Day{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+}
+#Year{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+}
+.time{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 70px;
+}
+.time{
+    margin-left: 5px;
+    position:static;
+}
+.start{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 30px;
+width: 115px;
+height: 40px;
+border: 2px solid #333;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+margin-left: 10px;
+color: #333;
+
+}
+.pause{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 30px;
+width: 115px;
+height: 40px;
+border: 2px solid #333;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+margin-left: 10px;
+color: #333;
+
+}
+.reset{
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 30px;
+width: 115px;
+height: 40px;
+border: 2px solid #333;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+margin-left: 10px;
+color: #333;
+
+}
+.row{
+    display: flex;
+    margin-top: 20px;
+}
+.row1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.gg{
+    font-size: 15px;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left_page">
+            <img class="clock" src="clock.png" alt="">
+            <img id="arrow3" class="s_hours" src="s_h.png" alt="">
+            <img id="arrow2" class="s_min" src="s_min.png" alt="">
+            <img id="arrow1" class="s_sec" src="s_sec.png" alt="">
+        </div>
+        <div class="right_page">
+            <div class="row1">
+                <span class="time" id="hours"></span>
+                <span class="gg">|hours|</span>
+                <span class="time" id="minutes"></span>
+                <span class="gg">|minutes|</span>
+                <span class="time" id="seconds"></span>
+                <span class="gg">|seconds|</span>
+                <span class="time" id="mseconds"></span>
+                <span class="gg">|milliseconds|</span>
+            </div>
+            <div class="row">
+                <div class="start" id="start">start</div>
+                <div class="pause" id="pause">pause</div>
+                <div class="reset" id="reset">reset</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="scr_stopWatch.js"></script>
+</body>
+</html>
